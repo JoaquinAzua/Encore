@@ -1,4 +1,6 @@
 import './EventListItem.css'
+import { Link } from 'react-router-dom'
+
 
 export default function EventListItem({event}) {
     return (
@@ -9,7 +11,7 @@ export default function EventListItem({event}) {
             <div className="buy">
                 <span></span>
                 <button className="btn-sm" >
-                Buy Tickets
+                <Link to="/tables">See Tickets</Link>
                 </button>
             </div>
         </div>
