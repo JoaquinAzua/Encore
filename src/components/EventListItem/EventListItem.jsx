@@ -1,4 +1,4 @@
-export default function EventListItem() {
+export default function EventListItem({event}) {
     return (
         <div className="EventListItem">
             <div className="image flex-ctr-ctr"></div>
@@ -6,7 +6,7 @@ export default function EventListItem() {
             <div className="buy">
                 <span></span>
                 <button className="btn-sm" >
-                See Tickets
+                {event.name}
                 </button>
             </div>
         </div>
