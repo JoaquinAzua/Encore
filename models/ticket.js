@@ -1,5 +1,11 @@
-const mongoose = require('mongoose');
-require('./event');
-const ticketSchema = require('./ticketSchema');
+const Schema = require('mongoose').Schema;
 
-module.exports = ticketSchema;
+const ticketSchema = new Schema({
+  seat: {type: Number, min:1, max:6},
+  table: {type: Schema.Types.ObjectId, ref:'Table'},
+  price: {type: Number, required: true, default: 0},
+}, {
+  timestamps: true
+});
+
+module.exports = ('Ticket', ticketSchema);

@@ -22,9 +22,8 @@ export default function EventsPage({ user, setUser }) {
     return (
       <main className="EventsPage"> events page
         <EventList 
-          // key={events.id}
+          key={eventItems.id}
           events={eventItems}
-          // events={eventItems.map(event => event.length)}
         />
       </main>
     );

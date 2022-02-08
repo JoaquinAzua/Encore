@@ -1,0 +1,42 @@
+.EventListItem {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3vmin;
+    padding: 2vmin;
+    color: var(--text-light);
+    background-color: var(--white);
+    border: .1vmin solid var(--tan-3);
+    border-radius: 1vmin;
+    font-size: 4vmin;
+  }
+  
+  .EventListItem .image
+   {
+    height: 5vw;
+    width: 5vw;
+    font-size: 2vw;
+    background-color: var(--tan-1);
+    border: .1vmin solid var(--tan-3);
+    border-radius: 1vmin;
+  }
+  .EventListItem .name {
+    font-size: 3vmin;
+  }
+  .EventListItem .buy {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .EventListItem .buy {
+    font-size: 1.7vw;
+    text-align: center;
+    color: var(--text-light);
+  }
+  
+  .EventListItem .date {
+    font-size: 2vw;
+    text-align: center;
+    color: var(--text-light);
+  }
