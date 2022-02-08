@@ -15,7 +15,7 @@ const Event = require('./models/event');
     
   ]);
 
-  console.log(event)
+  console.log(events)
 
   process.exit();
 

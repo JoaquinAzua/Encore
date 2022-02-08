@@ -1,8 +1,9 @@
 const Schema = require('mongoose').Schema;
 
 const ticketSchema = new Schema({
-  name: {type: String, required: true},
-  image: String,
+//   row, (tablemodel)
+//   seat, 
+//   section(table)
   event: {type: Schema.Types.ObjectId, ref:'Event'},
   price: {type: Number, required: true, default: 0},
 }, {

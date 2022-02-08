@@ -4,10 +4,10 @@ require('./config/database');
 
 // Require the Mongoose models
 const User = require('./models/user');
-// const Item = require('./models/item');
-// const Category = require('./models/category');
+// const Ticket = require('./models/ticket');
+const Event = require('./models/event');
 // const Order = require('./models/order');
 
 // Local variables will come in handy for holding retrieved documents
-let user, item, category, order;
-let users, items, categories, orders;
+let user, ticket, event, order;
+let users, tickets, events, orders;

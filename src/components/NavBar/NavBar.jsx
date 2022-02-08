@@ -10,7 +10,7 @@ function NavBar({user, setUser}){
     }
     return (
     <nav>
-        <Link to="/details">Event Details</Link>
+        <Link to="/events">Event Details</Link>
         &nbsp; | &nbsp;
         <Link to="/orders">Order History</Link>
         &nbsp; | &nbsp;

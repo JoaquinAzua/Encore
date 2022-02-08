@@ -6,6 +6,7 @@ import NewOrderPage from '../NewOrderPage/NewOrderPage';
 import AuthPage from '../AuthPage/AuthPage';
 import OrderHistoryPage from '../OrderHistoryPage/OrderHistoryPage';
 import NavBar from '../../components/NavBar/NavBar';
+import EventsPage from '../EventsPage/EventsPage';
 
 
 
@@ -22,6 +23,7 @@ function App() {
             {/* Future routes go here */}
             <Route path="/orders/new" element={<NewOrderPage />} />
             <Route path="/orders" element={<OrderHistoryPage />} />
+            <Route path="/events" element={<EventsPage />} />
           </Routes>
         </>
         :
