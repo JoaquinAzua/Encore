@@ -1,4 +1,5 @@
-const Schema = require('mongoose').Schema;
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
 
 
 const eventSchema = new Schema({
@@ -10,4 +11,4 @@ const eventSchema = new Schema({
   timestamps: true
 });
 
-module.exports = ('Event', eventSchema);
+module.exports = mongoose.model('Event', eventSchema);

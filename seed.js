@@ -16,18 +16,45 @@ const Table = require('./models/table');
     {name: 'Bill Burr', genre: 'Comedy', date: '2022-04-30', sortOrder: 50},
     
   ]);
+  
   await Table.deleteMany({});
   const tables = await Table.create([
-    {row: 'A', column: 1, }
+    {row: 'A', column: 1, maxTickets: 6, full: false },
+    {row: 'A', column: 2, maxTickets: 6, full: false },
+    {row: 'A', column: 3, maxTickets: 6, full: false },
+    {row: 'A', column: 4, maxTickets: 6, full: false },
+    {row: 'A', column: 5, maxTickets: 6, full: false },
+    {row: 'B', column: 1, maxTickets: 6, full: false },
+    {row: 'B', column: 2, maxTickets: 6, full: false },
+    {row: 'B', column: 3, maxTickets: 6, full: false },
+    {row: 'B', column: 4, maxTickets: 6, full: false },
+    {row: 'B', column: 5, maxTickets: 6, full: false },
+    {row: 'C', column: 1, maxTickets: 6, full: false },
+    {row: 'C', column: 2, maxTickets: 6, full: false },
+    {row: 'C', column: 3, maxTickets: 6, full: false },
+    {row: 'C', column: 4, maxTickets: 6, full: false },
+    {row: 'C', column: 5, maxTickets: 6, full: false },
+    {row: 'D', column: 1, maxTickets: 6, full: false },
+    {row: 'D', column: 2, maxTickets: 6, full: false },
+    {row: 'D', column: 3, maxTickets: 6, full: false },
+    {row: 'D', column: 4, maxTickets: 6, full: false },
+    {row: 'D', column: 5, maxTickets: 6, full: false },
     
   ]);
   await Ticket.deleteMany({});
   const tickets = await Ticket.create([
-    {seat: 1, table: table, ticket: ticket},
+    {seat: 1, price: 100},
+    {seat: 2, price: 100},
+    {seat: 3, price: 100},
+    {seat: 4, price: 100},
+    {seat: 5, price: 100},
+    {seat: 6, price: 100},
     
   ]);
 
-  console.log(events)
+  // console.log(events)
+  console.log(tables)
+  console.log(tickets)
 
   process.exit();
 
