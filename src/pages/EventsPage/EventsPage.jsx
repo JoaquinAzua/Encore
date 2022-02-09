@@ -22,7 +22,7 @@ export default function EventsPage({ user, setUser }) {
     return (
       <main className="EventsPage"> 
         <EventList 
-          key={eventItems.id}
+          key={eventItems._id}
           events={eventItems}
         />
       </main>

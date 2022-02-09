@@ -18,7 +18,8 @@ export default function TablesPage({ user, setUser }) {
       return (
         <main className="EventsPage"> 
             <TableList 
-          
+                key={allTables._id}
+                tables={allTables}
             />
         </main>
       );
