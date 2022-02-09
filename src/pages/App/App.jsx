@@ -7,6 +7,7 @@ import AuthPage from '../AuthPage/AuthPage';
 import OrderHistoryPage from '../OrderHistoryPage/OrderHistoryPage';
 import NavBar from '../../components/NavBar/NavBar';
 import EventsPage from '../EventsPage/EventsPage';
+import TableTicketsPage from '../TableTicketsPage/TableTicketsPage';
 
 
 
@@ -24,6 +25,7 @@ function App() {
             <Route path="/orders/new" element={<NewOrderPage />} />
             <Route path="/orders" element={<OrderHistoryPage />} />
             <Route path="/events" element={<EventsPage />} />
+            <Route path="/tables" element={<TableTicketsPage />} />
           </Routes>
         </>
         :

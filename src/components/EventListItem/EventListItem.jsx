@@ -11,7 +11,7 @@ export default function EventListItem({event}) {
             <div className="buy">
                 <span></span>
                 <button className="btn-sm" >
-                <Link to="/tables">See Tickets</Link>
+                    <Link to="/tables">See Tickets</Link>
                 </button>
             </div>
         </div>
