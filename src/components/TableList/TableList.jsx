@@ -13,7 +13,9 @@ export default function TableList({tables}) {
     <>
       <div className='header'>Encore</div>
     <main className='flex'>
-      <aside className='ticketinfo'>Tickets Display</aside>
+      <aside className='ticketinfo'>
+        Tickets Display
+      </aside>
       <div className="TableList">
         {allTables}
       </div>

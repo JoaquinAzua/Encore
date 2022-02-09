@@ -53,7 +53,6 @@ const Table = require('./models/table');
       
     ]);
   }
-  
   console.log(tables)
   process.exit();
 
