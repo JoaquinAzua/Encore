@@ -42,20 +42,19 @@ const Table = require('./models/table');
     
   ]);
   await Ticket.deleteMany({});
-  const tickets = await Ticket.create([
-    {seat: 1, price: 100},
-    {seat: 2, price: 100},
-    {seat: 3, price: 100},
-    {seat: 4, price: 100},
-    {seat: 5, price: 100},
-    {seat: 6, price: 100},
-    
-  ]);
-
-  // console.log(events)
+  for(let table of tables) {
+    await Ticket.create([
+      {seat: 1, price: 100, table},
+      {seat: 2, price: 100, table},
+      {seat: 3, price: 100, table},
+      {seat: 4, price: 100, table},
+      {seat: 5, price: 100, table},
+      {seat: 6, price: 100, table},
+      
+    ]);
+  }
+  
   console.log(tables)
-  console.log(tickets)
-
   process.exit();
 
 })();
