@@ -7,8 +7,8 @@ module.exports = {
 
 
 async function index(req, res) {
-    const tables = await Table.find({});
+    const tables = await Table.find({}).sort('row').sort('column').exec();
     // resort based upon the sortOrder of the categories
-    // events.sort((a, b) => a.sortOrder - b.sortOrder);
+    // tables.sort((a, b) => a.sortOrder - b.sortOrder);
     res.json(tables);
 }
