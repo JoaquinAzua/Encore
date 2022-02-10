@@ -1,9 +1,9 @@
 import './TableList.css'
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import TableTickets from '../TableTickets/TableTickets'
 import TicketsForTables from '../TicketsForTables/TicketsForTables'
 
-export default function TableList({tables, tickets}) {
+export default function TableList({tables, tickets, handleAddToCart}) {
   const [selectedTable, setSelectedTable] = useState(null);
 
   let filterTickets = tickets.filter(t => t.table._id === selectedTable);
@@ -19,6 +19,7 @@ export default function TableList({tables, tickets}) {
     <TicketsForTables
       key={ticket._id}
       ticket={ticket}
+      handleAddToCart={handleAddToCart}
     />
   );
   
@@ -33,7 +34,7 @@ export default function TableList({tables, tickets}) {
     <main className='flex'>
       <aside className='ticketinfo'>
         <div>
-          selectedTable
+          
         </div>
         {
           selectedTable 
@@ -43,9 +44,10 @@ export default function TableList({tables, tickets}) {
             <TicketsForTables
               key={ticket._id}
               ticket={ticket}
+              handleAddToCart={handleAddToCart}
             />)
             :
-            allTickets
+            "Select a table to view tickets"
         }
       </aside>
       <div className="TableList">

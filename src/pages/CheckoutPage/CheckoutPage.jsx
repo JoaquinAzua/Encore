@@ -1,4 +1,6 @@
-function CheckoutPage(){
+
+
+function CheckoutPage({handleCheckout, order}){
 
     return <h1>Checkout</h1>
 }

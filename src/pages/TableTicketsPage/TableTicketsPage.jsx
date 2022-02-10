@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import * as ordersAPI from '../../utilities/orders-api';
 import * as tablesAPI from '../../utilities/tables-api';
 import * as ticketsAPI from '../../utilities/tickets-api'
 import TableList from '../../components/TableList/TableList';
+import CheckoutPage from '../CheckoutPage/CheckoutPage';
 
 
 
@@ -15,15 +16,15 @@ export default function TablesPage({ user, setUser }) {
   // Use the navigate function to change routes programmatically
   const navigate = useNavigate();
 
-  // async function handleAddToOrder(itemId) {
-  //   const cart = await ordersAPI.addItemToCart(itemId);
-  //   setCart(cart);
-  // }
+  async function handleAddToCart(itemId) {
+    const cart = await ordersAPI.addItemToCart(itemId);
+    setCart(cart);
+  }
 
-  // async function handleCheckout() {
-  //   await ordersAPI.checkout();
-  //   navigate('/orders');
-  // }
+  async function handleCheckout() {
+    await ordersAPI.checkout();
+    navigate('/events');
+  }
   
     useEffect(function () {
       async function getTablesTickets() {
@@ -36,11 +37,11 @@ export default function TablesPage({ user, setUser }) {
       }
       getTablesTickets();
 
-      // async function getCart() {
-      //   const cart = await ordersAPI.getCart();
-      //   setCart(cart);
-      // }
-      // getCart();
+      async function getCart() {
+        const cart = await ordersAPI.getCart();
+        setCart(cart);
+      }
+      getCart();
     
     }, [])
       return (
@@ -48,14 +49,13 @@ export default function TablesPage({ user, setUser }) {
             <TableList 
               key={allTables._id}
               tables={allTables}
-              // key={allTickets._id}
               tickets={allTickets}
+              handleAddToCart={handleAddToCart}
+              />
+            <CheckoutPage
+              handleCheckout={handleCheckout}   
+              order={cart}  
             />
-            {/* <OrderDetail (CheckoutPage)
-              handleChangeQty={handleChangeQty} 
-              order={cart} 
-              handleCheckout={handleCheckout}  
-            /> */}
         </main>
       );
     }
