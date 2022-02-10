@@ -1,0 +1,10 @@
+.ticketitems {
+    display: flex;
+    
+}
+.seat {
+    margin: 10px;
+}
+.price {
+    margin: 10px;
+}
