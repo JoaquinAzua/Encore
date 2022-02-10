@@ -20,11 +20,12 @@ export default function TableList({tables, tickets}) {
     />
   );
   if (selectedTable) {
-    const filterTickets = tickets.filter(t => t.table._id = selectedTable);
+    let filterTickets = tickets.filter(t => t.table._id === selectedTable);
   } 
 
 
   console.log(selectedTable)
+  // console.log(filterTickets)
   return (
     <>
       <div className='header'>Encore</div>

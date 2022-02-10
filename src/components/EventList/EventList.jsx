@@ -8,7 +8,7 @@ export default function EventList({events}) {
       event={event}
     />
   );
-  console.log(events)
+  // console.log(events)
   return (
     <main className="EventList">
       {eventItems}

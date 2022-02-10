@@ -15,8 +15,8 @@ export default function TablesPage({ user, setUser }) {
         const tickets = await ticketsAPI.getAll();
         setAllTables(tables);
         setAllTickets(tickets)
-        console.log(tables)
-        console.log(tickets)
+        // console.log(tables)
+        // console.log(tickets)
       }
       getTablesTickets();
     
