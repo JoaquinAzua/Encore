@@ -1,5 +1,5 @@
 export default function Tickets() {
     return (
-        <div>ticket</div>
+        <div>t</div>
     )
 }

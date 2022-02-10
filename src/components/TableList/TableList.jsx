@@ -20,19 +20,21 @@ export default function TableList({tables, tickets}) {
     />
   );
   if (selectedTable) {
-    const filterTickets = tickets.filter(t => t.table._id.equals(selectedTable));
+    const filterTickets = tickets.filter(t => t.table._id = selectedTable);
   } 
 
 
-  // console.log(allTables)
+  console.log(selectedTable)
   return (
     <>
       <div className='header'>Encore</div>
     <main className='flex'>
       <aside className='ticketinfo'>
         {
-          selectedTable ? 
-          tickets.filter(t => t.table._id.equals(selectedTable)).map(ticket =>
+          selectedTable 
+          ? 
+          tickets.filter(t => t.table._id === selectedTable)
+          .map(ticket =>
             <TicketsForTables
               key={ticket._id}
               ticket={ticket}
