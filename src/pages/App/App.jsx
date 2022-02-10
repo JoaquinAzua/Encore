@@ -1,8 +1,8 @@
 import './App.css';
 import { useState } from "react";
 import { getUser } from "../../utilities/users-service"
-import { Routes, Route } from 'react-router-dom';
-import NewOrderPage from '../NewOrderPage/NewOrderPage';
+import { Routes, Route, Navigate } from 'react-router-dom';
+import CheckoutPage from '../CheckoutPage/CheckoutPage';
 import AuthPage from '../AuthPage/AuthPage';
 import OrderHistoryPage from '../OrderHistoryPage/OrderHistoryPage';
 import NavBar from '../../components/NavBar/NavBar';
@@ -22,10 +22,12 @@ function App() {
         <NavBar user={user} setUser={setUser} />
           <Routes>
             {/* Future routes go here */}
-            <Route path="/orders/new" element={<NewOrderPage />} />
+            <Route path="/orders/checkout" element={<CheckoutPage />} />
             <Route path="/orders" element={<OrderHistoryPage />} />
             <Route path="/events" element={<EventsPage />} />
             <Route path="/tables" element={<TableTicketsPage />} />
+            {/* redirect to /orders/new if path in address bar hasn't matched a <Route> above */}
+            <Route path="/*" element={<Navigate to="/events" />} />
           </Routes>
         </>
         :

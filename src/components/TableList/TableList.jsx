@@ -1,5 +1,5 @@
 import './TableList.css'
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import TableTickets from '../TableTickets/TableTickets'
 import TicketsForTables from '../TicketsForTables/TicketsForTables'
 

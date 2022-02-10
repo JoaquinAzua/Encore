@@ -14,11 +14,11 @@ function NavBar({user, setUser}){
         &nbsp; | &nbsp;
         <Link to="/orders">Order History</Link>
         &nbsp; | &nbsp;
-        <Link to="/orders/new">New Order</Link>
-        &nbsp; | &nbsp;
         <span>Welcome, {user.name}!</span>
         &nbsp; | &nbsp;
         <Link to="" onClick={handleLogOut}>Log Out</Link>
+        &nbsp; | &nbsp;
+        <Link to="/orders/checkout">Cart</Link>
     </nav>
     ) 
 }
