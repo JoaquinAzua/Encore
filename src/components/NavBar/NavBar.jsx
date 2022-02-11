@@ -12,13 +12,13 @@ function NavBar({user, setUser}){
     <nav>
         <Link to="/events">Event Details</Link>
         &nbsp; | &nbsp;
-        <Link to="/orders">Order History</Link>
-        &nbsp; | &nbsp;
+        {/* <Link to="/orders">Order History</Link>
+        &nbsp; | &nbsp; */}
         <span>Welcome, {user.name}!</span>
         &nbsp; | &nbsp;
         <Link to="" onClick={handleLogOut}>Log Out</Link>
         &nbsp; | &nbsp;
-        <Link to="/orders/checkout">Cart</Link>
+        <Link to="/orders/cart/checkout">Cart</Link>
     </nav>
     ) 
 }

@@ -14,15 +14,18 @@
   
   .EventListItem .image
    {
-    height: 5vw;
-    width: 5vw;
+    height: 20vw;
+    width: 20vw;
     font-size: 2vw;
+    margin: 3vmin;
     background-color: var(--tan-1);
     border: .1vmin solid var(--tan-3);
     border-radius: 1vmin;
   }
   .EventListItem .name {
-    font-size: 3vmin;
+    font-size: 3vmin; 
+    margin-left: 5vw;
+    
   }
   .EventListItem .buy {
     display: flex;
@@ -35,8 +38,5 @@
     color: var(--text-light);
   }
   
-  .EventListItem .date {
-    font-size: 2vw;
-    text-align: center;
-    color: var(--text-light);
-  }
+  
+  

@@ -22,7 +22,7 @@ function App() {
         <NavBar user={user} setUser={setUser} />
           <Routes>
             {/* Future routes go here */}
-            <Route path="/orders/checkout" element={<CheckoutPage />} />
+            <Route path="/orders/cart/checkout" element={<CheckoutPage />} />
             <Route path="/orders" element={<OrderHistoryPage />} />
             <Route path="/events" element={<EventsPage />} />
             <Route path="/tables" element={<TableTicketsPage />} />

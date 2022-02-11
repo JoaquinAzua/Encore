@@ -50,8 +50,11 @@ export default function TableList({tables, tickets, handleAddToCart}) {
             "Select a table to view tickets"
         }
       </aside>
-      <div className="TableList">
-        {allTables}
+      <div>
+        <div className='stage'>Concert Main Stage</div>
+        <div className="TableList">
+          {allTables}
+        </div>
       </div>
     </main>
     </>

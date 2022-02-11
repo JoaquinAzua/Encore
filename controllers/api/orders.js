@@ -18,7 +18,8 @@ async function addToCart(req, res) {
   const cart = await Order.getCart(req.user._id);
   // The promise resolves to the document, which we already have
   // in the cart variable, so no need to create another variable...
-  await cart.addItemToCart(req.params.id);
+  cart.tickets.push(req.params.id)
+  await cart.save()
   res.json(cart);
 }
 

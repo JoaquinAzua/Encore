@@ -4,7 +4,6 @@ import * as ordersAPI from '../../utilities/orders-api';
 import * as tablesAPI from '../../utilities/tables-api';
 import * as ticketsAPI from '../../utilities/tickets-api'
 import TableList from '../../components/TableList/TableList';
-import CheckoutPage from '../CheckoutPage/CheckoutPage';
 
 
 
@@ -16,46 +15,43 @@ export default function TablesPage({ user, setUser }) {
   // Use the navigate function to change routes programmatically
   const navigate = useNavigate();
 
-  async function handleAddToCart(itemId) {
-    const cart = await ordersAPI.addItemToCart(itemId);
+  async function handleAddToCart(ticketId) {
+    const cart = await ordersAPI.addTicketToCart(ticketId); 
     setCart(cart);
   }
-
-  async function handleCheckout() {
-    await ordersAPI.checkout();
-    navigate('/events');
-  }
   
-    useEffect(function () {
-      async function getTablesTickets() {
-        const tables = await tablesAPI.getAll();
-        const tickets = await ticketsAPI.getAll();
-        setAllTables(tables);
-        setAllTickets(tickets)
-        // console.log(tables)
-        // console.log(tickets)
-      }
-      getTablesTickets();
-
-      async function getCart() {
-        const cart = await ordersAPI.getCart();
-        setCart(cart);
-      }
-      getCart();
+  // async function handleCheckout() {
+  //   await ordersAPI.checkout();
+  //   // navigate('/events');
+  // }
+  
+  useEffect(function () {
+    async function getTablesTickets() {
+      const tables = await tablesAPI.getAll();
+      const tickets = await ticketsAPI.getAll();
+      setAllTables(tables);
+      setAllTickets(tickets)
+      // console.log(tables)
+      // console.log(tickets)
+    }
+    getTablesTickets();
     
-    }, [])
-      return (
-        <main className="EventsPage"> 
+    async function getCart() {
+      const cart = await ordersAPI.getCart();
+      setCart(cart);
+    }
+    getCart();
+    
+    
+  }, [])
+  return (
+    <main className="EventsPage"> 
             <TableList 
               key={allTables._id}
               tables={allTables}
               tickets={allTickets}
-              handleAddToCart={handleAddToCart}
+               handleAddToCart={handleAddToCart}
               />
-            <CheckoutPage
-              handleCheckout={handleCheckout}   
-              order={cart}  
-            />
         </main>
       );
     }

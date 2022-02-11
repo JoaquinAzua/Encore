@@ -1,6 +1,8 @@
 .table {
-    border: solid ;
+    border: solid var(--bluegreen);
     height: 50px;
     width: 30px;
-    margin: 10px
+    margin: 10px;
+    color: var(--blue-1);
+    
 }

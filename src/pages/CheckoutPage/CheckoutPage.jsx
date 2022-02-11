@@ -1,8 +1,19 @@
+import * as ordersAPI from '../../utilities/orders-api';
 
 
-function CheckoutPage({handleCheckout, order}){
+function CheckoutPage({}){
 
-    return <h1>Checkout</h1>
+
+    async function handleCheckout() {
+        await ordersAPI.checkout();
+        // navigate('/events');
+      }
+
+    return (
+        <div>
+            
+        </div>
+    )
 }
 
 export default CheckoutPage;

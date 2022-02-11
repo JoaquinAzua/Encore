@@ -7,11 +7,15 @@ export default function EventList({events}) {
       key={event._id}
       event={event}
     />
+    
   );
   // console.log(events)
   return (
+    <>
+    <div>Encore</div>
     <main className="EventList">
       {eventItems}
     </main>
+    </>
   );
 }

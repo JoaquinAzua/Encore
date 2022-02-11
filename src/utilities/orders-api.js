@@ -8,9 +8,9 @@ export function getCart() {
 }
 
 // Add an item to the cart
-export function addItemToCart(itemId) {
+export function addTicketToCart(ticketId) {
     // Just send itemId for best security (no pricing)
-    return sendRequest(`${BASE_URL}/cart/items/${itemId}`, 'POST');
+    return sendRequest(`${BASE_URL}/cart/tickets/${ticketId}`, 'POST');
   }
 
 // Updates the order's (cart's) isPaid property to true
