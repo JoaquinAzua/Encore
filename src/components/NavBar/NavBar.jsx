@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import * as userService from "../../utilities/users-service";
 
-function NavBar({user, setUser}){
+function NavBar({user, setUser, cart}){
     function handleLogOut() {
         // Delegate to the users-service
         userService.logOut();
@@ -18,7 +18,7 @@ function NavBar({user, setUser}){
         &nbsp; | &nbsp;
         <Link to="" onClick={handleLogOut}>Log Out</Link>
         &nbsp; | &nbsp;
-        <Link to="/orders/cart/checkout">Cart</Link>
+        <Link to="/orders/cart/checkout">Cart-{cart.tickets && cart.tickets.length}</Link>
     </nav>
     ) 
 }

@@ -22,7 +22,7 @@ orderSchema.statics.getCart = function(userId) {
         // upsert option creates the doc if it doesn't exist!
         // new option will make sure the updated doc is returned
         {upsert: true, new: true}
-    );
+    ).populate('tickets')
 };
 
 

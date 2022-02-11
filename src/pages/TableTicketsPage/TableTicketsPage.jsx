@@ -7,10 +7,9 @@ import TableList from '../../components/TableList/TableList';
 
 
 
-export default function TablesPage({ user, setUser }) {
+export default function TablesPage({ user, setUser, setCart }) {
     const [allTables, setAllTables] = useState([]);
     const [allTickets, setAllTickets] = useState([]);
-    const [cart, setCart] = useState(null);
 
   // Use the navigate function to change routes programmatically
   const navigate = useNavigate();
