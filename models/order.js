@@ -25,6 +25,11 @@ orderSchema.statics.getCart = function(userId) {
     ).populate('tickets')
 };
 
+orderSchema.virtual('orderTotal').get(function() {
+    // 'this' refers to the order document
+    return this.tickets.reduce((total, ticket) => total + ticket.price, 0);
+  });
+
 
 
 

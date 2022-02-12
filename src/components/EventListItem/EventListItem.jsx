@@ -10,7 +10,8 @@ export default function EventListItem({event}) {
 
     return (
         <div className="EventListItem">
-            <div className="image flex-ctr-ctr"></div>
+            
+            <div className="image "><img src={event.image} /></div>
             <div className="name">{event.name} <hr /> Saturday {m}/{d}</div>
             <div className="buy">
                 <span></span>

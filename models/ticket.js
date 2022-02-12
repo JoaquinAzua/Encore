@@ -6,7 +6,18 @@ const ticketSchema = new Schema({
   price: {type: Number, required: true, default: 0},
   table: {type: Schema.Types.ObjectId, ref: 'Table'}
 }, {
-  timestamps: true
+  timestamps: true,
+  toJSON: {virtuals:true},
 });
+
+// ticketSchema.virtual('cartTotal').get(function () {
+//   let total = 0;
+//   for (this.price.length) {
+//     total += this.price
+//   }
+//   return total;
+// })
+
+
 
 module.exports = mongoose.model('Ticket', ticketSchema);

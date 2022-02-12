@@ -9,11 +9,11 @@ const Table = require('./models/table');
 
   await Event.deleteMany({});
   const events = await Event.create([
-    {name: 'Red Hot Chili Peppers', genre: 'Rock', date: '2022-03-05', sortOrder: 10},
-    {name: 'J.Cole', genre: 'Rap', date: '2022-03-19', sortOrder: 20},
-    {name: 'Andrew Schulz', genre: 'Comedy', date: '2022-04-02', sortOrder: 30},
-    {name: 'Masego', genre: 'R&B', date: '2022-04-16', sortOrder: 40},
-    {name: 'Bill Burr', genre: 'Comedy', date: '2022-04-30', sortOrder: 50},
+    {name: 'Red Hot Chili Peppers', genre: 'Rock', date: '2022-03-05', image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKOrhXl-9z6Eipj7_HZLO7ndBZnr7x5_-AQQ&usqp=CAU"  , sortOrder: 10},
+    {name: 'J.Cole', genre: 'Rap', date: '2022-03-19', image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTf58DL6cQ4EGX86x2HAWl8Oorf6wW7phJ8XQ1_OhW4tFcaJUb79AjiJNFh2AlnRorbLSA&usqp=CAU", sortOrder: 20},
+    {name: 'Andrew Schulz', genre: 'Comedy', date: '2022-04-02', image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFSpO2wmMY3UbVVcDjtOnCtZJXrLOF5ywZrg&usqp=CAU", sortOrder: 30},
+    {name: 'Masego', genre: 'R&B', date: '2022-04-16',image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsbORszaokNjRiBNjG04vwscF75I-_Rwnc0A&usqp=CAU", sortOrder: 40},
+    {name: 'Bill Burr', genre: 'Comedy', date: '2022-04-30', image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJa2d3xnV9U3otaEU0tCOq9q8q8ZrTtO9l_g&usqp=CAU", sortOrder: 50},
     
   ]);
   
@@ -53,7 +53,7 @@ const Table = require('./models/table');
       
     ]);
   }
-  // console.log(tables)
+
   process.exit();
 
 })();

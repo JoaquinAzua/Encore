@@ -12,7 +12,7 @@
     font-size: 4vmin;
   }
   
-  .EventListItem .image
+  .EventListItem .image > img
    {
     height: 20vw;
     width: 20vw;

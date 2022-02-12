@@ -40,10 +40,12 @@ function CheckoutPage({ }) {
                     <div 
                         key={ticket._id}
                     >
-                        {ticket.seat}
-                        $ {ticket.price}
+                        Seat: {ticket.seat} -
+                        ${ticket.price}
                     </div>
+                    
                 )}
+
                 <button
                     className="btn-sm"
                     onClick={handleCheckout}

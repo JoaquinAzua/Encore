@@ -6,6 +6,7 @@ const eventSchema = new Schema({
   name: {type: String, required: true },
   genre: {type: String},
   date: {type: Date, required: true },
+  image: {type: String},
   sortOrder: Number,
 }, {
   timestamps: true
