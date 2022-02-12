@@ -4,7 +4,6 @@ const Schema = mongoose.Schema;
 const tableSchema = new Schema({
   row: {type: String},
   column: {type:Number},
-  // tickets: [{type: Schema.Types.ObjectId, ref:'Ticket'}],
   maxTickets: {type: Number},
   full: {type: Boolean},
 }, {

@@ -8,5 +8,7 @@ router.get('/cart', ordersCtrl.cart);
 router.post('/cart/tickets/:id', ordersCtrl.addToCart);
 // POST /api/orders/cart/checkout
 router.post('/cart/checkout', ordersCtrl.checkout);
+// GET /api/orders/history
+router.get('/history', ordersCtrl.history);
 
 module.exports = router;

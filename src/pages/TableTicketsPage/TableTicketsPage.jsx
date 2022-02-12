@@ -11,7 +11,6 @@ export default function TablesPage({ user, setUser, setCart }) {
     const [allTables, setAllTables] = useState([]);
     const [allTickets, setAllTickets] = useState([]);
 
-  // Use the navigate function to change routes programmatically
   const navigate = useNavigate();
 
   async function handleAddToCart(ticketId) {
@@ -19,19 +18,12 @@ export default function TablesPage({ user, setUser, setCart }) {
     setCart(cart);
   }
   
-  // async function handleCheckout() {
-  //   await ordersAPI.checkout();
-  //   // navigate('/events');
-  // }
-  
   useEffect(function () {
     async function getTablesTickets() {
       const tables = await tablesAPI.getAll();
       const tickets = await ticketsAPI.getAll();
       setAllTables(tables);
       setAllTickets(tickets)
-      // console.log(tables)
-      // console.log(tickets)
     }
     getTablesTickets();
     

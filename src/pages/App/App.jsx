@@ -4,7 +4,7 @@ import { getUser } from "../../utilities/users-service"
 import { Routes, Route, Navigate } from 'react-router-dom';
 import CheckoutPage from '../CheckoutPage/CheckoutPage';
 import AuthPage from '../AuthPage/AuthPage';
-import OrderHistoryPage from '../OrderHistoryPage/OrderHistoryPage';
+import OrderHistoryPage from '../../components/OrderHistory/OrderHistory';
 import NavBar from '../../components/NavBar/NavBar';
 import EventsPage from '../EventsPage/EventsPage';
 import TableTicketsPage from '../TableTicketsPage/TableTicketsPage';

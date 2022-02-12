@@ -5,6 +5,7 @@ module.exports = {
   cart,
   addToCart,
   checkout,
+  history
 };
 
 // A cart is the unpaid order for a user
@@ -30,3 +31,12 @@ async function checkout(req, res) {
   await cart.save();
   res.json(cart);
 }
+
+// Return the logged in user's paid order history
+async function history(req, res) {
+    // Sort most recent orders first
+    const orders = await Order
+      .find({ user: req.user._id, isPaid: true })
+      .sort('-updatedAt').populate('tickets').exec();
+    res.json(orders);
+  }

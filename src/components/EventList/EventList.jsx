@@ -6,7 +6,7 @@ export default function EventList({events}) {
     <EventListItem
       key={event._id}
       event={event}
-    />
+    />  
   );
   // console.log(events)
   return (

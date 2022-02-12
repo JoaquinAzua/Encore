@@ -14,7 +14,7 @@ export default function EventsPage({ user, setUser }) {
     async function getEvents() {
       const events = await eventsAPI.getAll();
       setEventItems(events);
-      // console.log(events)
+      
     }
     getEvents();
   

@@ -2,23 +2,19 @@ import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import * as ordersAPI from '../../utilities/orders-api';
 import * as eventsAPI from '../../utilities/events-api'
+import OrderHistoryPage from '../../components/OrderHistory/OrderHistory';
 
 
 function CheckoutPage({ }) {
-    const [cart, setCart] = useState({tickets:[]})
+    const [cart, setCart] = useState({ tickets: [] })
+    const [orders, setOrders] = useState([]);
     // const [eventItems, setEventItems] = useState([]);
     const navigate = useNavigate();
-
-
-    
-
 
     async function handleCheckout() {
         await ordersAPI.checkout();
         navigate('/events');
     }
-
-    
 
 
     useEffect(function () {
@@ -28,42 +24,43 @@ function CheckoutPage({ }) {
         }
         getCart();
 
-        // async function getEvents() {
-        //     const events = await eventsAPI.getAll();
-        //     setEventItems(events);
-        //     // console.log(events)
-        //   }
-        //   getEvents();
+        async function fetchOrderHistory() {
+            const orders = await ordersAPI.getOrderHistory();
+            setOrders(orders);
+            console.log(orders)
+          }
+          fetchOrderHistory();
 
     }, [])
 
     return (
-        <div>
-            {/* {eventItems.map(event => 
-            <div 
-            key={event._id}
-            >
-                {event.name}    
-            </div>
-            )} */}
-            {cart.tickets.map(ticket => 
-            <div 
-            key={ticket._id}
-            >
-                {/* {ticket.table} */}
-                {ticket.seat}
-                $ {ticket.price}
-                
-            </div>
-            )}
-            <button
-                  className="btn-sm"
-                  onClick={handleCheckout}
-                  disabled={!cart.tickets.length}
+        <>
+            <div className='currentorder'>
+                {cart.tickets.map(ticket =>
+                    <div 
+                        key={ticket._id}
+                    >
+                        {ticket.seat}
+                        $ {ticket.price}
+                    </div>
+                )}
+                <button
+                    className="btn-sm"
+                    onClick={handleCheckout}
+                    disabled={!cart.tickets.length}
                 >
-                CHECKOUT
+                    CHECKOUT
                 </button>
-        </div>
+            </div>
+            <div>
+                {orders.map(order =>
+                    <OrderHistoryPage
+                    order={order}
+                    key={order._id}
+                    />
+                )}
+            </div>
+        </>
     )
 }
 
