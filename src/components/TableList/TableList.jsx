@@ -30,7 +30,7 @@ export default function TableList({tables, tickets, handleAddToCart}) {
   // console.log(filterTickets)
   return (
     <>
-      {/* <div className='header'>Encore</div> */}
+      {/* <div className='header'></div> */}
     <main className='flex'>
       <aside className='ticketinfo'>
         <div>

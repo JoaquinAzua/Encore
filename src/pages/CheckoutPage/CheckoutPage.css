@@ -1,0 +1,27 @@
+* {
+    color: #66fcf1;
+}
+
+.checkout {
+    height: 60vh;
+}
+
+.currentorders {
+    display: flex;
+}
+
+.pastorders {
+    /* width: 50%; */
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    align-items: center;
+    /* margin-bottom: 3vmin; */
+    padding: 2vmin;
+    color: var(--text-light);
+    background-color: var(--white);
+    /* border: .1vmin solid var(--tan-3); */
+    border-radius: 1vmin;
+    font-size: 2vmin;
+}

@@ -11,7 +11,17 @@ export default function EventList({events}) {
   // console.log(events)
   return (
     <>
-    <div>Encore</div>
+    <div className='description'>
+      <div className='welcome'>Welcome to Encore</div>
+      <p className='subhead'>
+        React's Premiere Concert/Show Venue <br />
+      </p>
+      <p className='address'> 
+        1108 SEIR Lane <br />
+        Remote, Tx 11010 <br />
+        P. 123-456-7890
+      </p>
+    </div>
     <main className="EventList">
       {eventItems}
     </main>

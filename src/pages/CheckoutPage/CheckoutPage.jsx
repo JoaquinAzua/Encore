@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import * as ordersAPI from '../../utilities/orders-api';
 import * as eventsAPI from '../../utilities/events-api'
+import './CheckoutPage.css'
 import OrderHistoryPage from '../../components/OrderHistory/OrderHistory';
 
 
@@ -34,16 +35,19 @@ function CheckoutPage({ }) {
     }, [])
 
     return (
+        <main>
+
         <>
+        <div className='checkout'>
             <div className='currentorder'>
                 {cart.tickets.map(ticket =>
                     <div 
                         key={ticket._id}
                     >
                         Seat: {ticket.seat} -
-                        ${ticket.price}
+                        $ {ticket.price}
+                        
                     </div>
-                    
                 )}
 
                 <button
@@ -54,15 +58,17 @@ function CheckoutPage({ }) {
                     CHECKOUT
                 </button>
             </div>
-            <div>
+            <div className='pastorders'>
                 {orders.map(order =>
                     <OrderHistoryPage
                     order={order}
                     key={order._id}
                     />
-                )}
-            </div>
+                    )} 
+            </div> 
+        </div>
         </>
+        </main>
     )
 }
 

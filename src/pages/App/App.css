@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  /* height: 80vh; */
 }
 
 .App-logo {
@@ -37,17 +38,24 @@
   }
 }
 
+footer {
+  display : flex; 
+  margin-top: 40px;
+  justify-content:center;
+  align-items: flex-end;
+  color: #66fcf1;
+  height: 100px; 
+  width:100%;
+}
+
 .footerinfo {
   display : flex; 
   margin-top: 40px;
-  justify-content: space-evenly;
+  justify-content: space-between;
   color: #66fcf1;
-  /* background-color: #C5C6C7; */
 }
 
 .copyright {
   margin-top: 20px;
   color: #45A29E;
-  /* background-color: #C5C6C7; */
-
 }

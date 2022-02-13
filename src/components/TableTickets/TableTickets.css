@@ -2,6 +2,7 @@
     border: solid var(--bluegreen);
     height: 50px;
     width: 30px;
+    /* margin-top: 40vw; */
     margin: 10px;
     color: var(--blue-1);
     display: flex; 
