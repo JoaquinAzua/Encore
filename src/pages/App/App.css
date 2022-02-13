@@ -36,3 +36,18 @@
     transform: rotate(360deg);
   }
 }
+
+.footerinfo {
+  display : flex; 
+  margin-top: 40px;
+  justify-content: space-evenly;
+  color: #66fcf1;
+  /* background-color: #C5C6C7; */
+}
+
+.copyright {
+  margin-top: 20px;
+  color: #45A29E;
+  /* background-color: #C5C6C7; */
+
+}

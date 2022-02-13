@@ -15,7 +15,7 @@
   .EventListItem .image > img
    {
     height: 20vw;
-    width: 20vw;
+    width: 25vw;
     font-size: 2vw;
     margin: 3vmin;
     background-color: var(--tan-1);
@@ -23,6 +23,8 @@
     border-radius: 1vmin;
   }
   .EventListItem .name {
+    display: flex;
+    justify-content: left;
     font-size: 3vmin; 
     margin-left: 5vw;
     
@@ -30,13 +32,12 @@
   .EventListItem .buy {
     display: flex;
     flex-direction: column;
-  }
-  
-  .EventListItem .buy {
     font-size: 1.7vw;
     text-align: center;
     color: var(--text-light);
   }
+  
+  
   
   
   
