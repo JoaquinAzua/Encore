@@ -5,9 +5,9 @@ function OrderHistoryPage({order}){
     return  (
         <>
         <br />
-        <span>Purchased on: {new Date(order.updatedAt).toLocaleDateString()}</span> <br />
+        <span>Purchased on: {new Date(order.updatedAt).toLocaleDateString()}</span> 
         {order.tickets.map(ticket =>
-                    <div className="pastorders" 
+                    <div className="pastordersinfo" 
                         key={ticket._id}
                     >
                         Seat: {ticket.seat} - 
