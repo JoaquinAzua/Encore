@@ -25,4 +25,9 @@ https://encore-1.herokuapp.com/events
 https://trello.com/b/16WoOUFv/project-4
 
 ---------
+##  **Icebox Items**
+- Add a kitchen to the venue
+- Add a contact owner page
+- Integrate Stripe API for checkout 
+
 Created by Joaquin Azua.
